@@ -17,7 +17,8 @@ exports.get = function (req, res) {
 		return;
 	}
 
-	var cached = feedCache[feedData.id];
+	var cached = feedCache[feedData.id], sent = false;
+
 	
 	// Check the cache and ensure it is not stale
 	if (cached && cached.timestamp > ((new Date().getTime()) - CACHE_TIMEOUT))
@@ -35,6 +36,7 @@ exports.get = function (req, res) {
 			.on('error', function (error) {
 				console.error('Parsing error: ', error)
 				res.send(500);
+				sent = true;
 			})
 			.on('meta', function (meta) {
 				buffer.title = meta.title;
@@ -52,8 +54,10 @@ exports.get = function (req, res) {
 				}
 			})
 			.on('end', function () {
-				res.set('Content-Type', 'application/json');
-				res.send(200, buffer);
+				if (!sent) {
+					res.set('Content-Type', 'application/json');
+					res.send(200, buffer);	
+				}				
 			});
 	}	
 }

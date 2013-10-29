@@ -1,0 +1,24 @@
+.brand {
+	
+}
+.accordion-toggle {
+	cursor:pointer;
+}
+.sidebar-nav {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-shadow: 0 1px 0 #FFF;
+	background-color: #F7F5FA;
+	border-radius: 5px;
+}
+.view-container {
+	margin-top:80px;
+}
+ul.nav li a{
+	overflow:hidden;
+}
+.open-link {
+/*	margin-top:2px;
+	margin-right:2px;
+	line-height:24px;*/
+}

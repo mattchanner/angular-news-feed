@@ -1,12 +1,18 @@
 <!doctype html>
 <html lang="en" ng-app="feedApp">
 <head>
-  <meta charset="utf-8">
+  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>My Feed Page</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <link rel="stylesheet" href="lib/bootstrap-3/css/bootstrap.css">
+  <link rel="stylesheet" href="lib/bootstrap-3/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="css/app.css">
 
   <script src="lib/jquery/jquery-1.10.2.js"></script>
-  <script src="lib/bootstrap/bootstrap.js"></script>
+  <script src="lib/bootstrap-3/js/bootstrap.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-animate.js"></script>
   <script src="lib/angular/angular-resource.js"></script>
@@ -15,11 +21,64 @@
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/services.js"></script>
+  <script src="js/filters.js"></script>
 </head>
-<body>
+<body ng-controller="FeedListCtrl" data-spy="scroll" data-target=".fixed-nav">
 
-  <div class="view-container">
-    <div ng-view class="view-frame"></div>
+  <nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Home</a>
+    </div>
+  </nav>
   </div>
+    <div class="container view-container">
+      <div class="row">
+        <div class="col-md-4 hidden-sm hidden-xs">
+          <ul class="sidebar-nav nav nav-list affix-top" data-spy="affix">
+            <li ng-repeat="feed in feeds">
+              <a href="#section-{{feed.id}}">{{feed.xmlUrl | simpleurl}}</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-7 col-sm-12 col-xs-12">
+          <div ng-repeat="feed in feeds" id="section-{{feed.id}}">
+            <div ng-controller="FeedDetailCtrl" ng-init="feedId=feed.id">
+              <div class='container'>
+                <div class='row'>
+                  <h3>{{feed.title}}</h3>
+                </div>
+                <div class='row'>
+                  <div class="panel-group" id="accordion">
+                    <div class="panel panel-default" ng-repeat="item in feed.data.items">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a class="accordion-toggle"
+                             data-toggle="collapse"
+                             data-parent="#accordion"
+                             data-target="#{{feedId}}collapse{{item.index}}">
+                             {{item.title}}
+                          </a>                                
+                              
+                        </h4>
+                      </div>
+                      <div id="{{feedId}}collapse{{item.index}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <a class="open-link pull-right btn btn-sm btn-primary" 
+                             href="{{item.href}}" 
+                             target="_blank"><span class="glyphicon glyphicon-share-alt"></span>
+                          </a>
+                          <div ng-bind-html="item.summary"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
 </body>
 </html>
