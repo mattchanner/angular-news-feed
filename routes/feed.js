@@ -24,14 +24,14 @@ exports.get = function (req, res) {
 	if (cached && cached.timestamp > ((new Date().getTime()) - CACHE_TIMEOUT))
 	{
 		res.set('Content-Type', 'application/json');
-		res.send(304, JSON.stringify(cached.data));	
+		res.send(200, cached.data);	
 	}
 	else
 	{
 		feedCache[feedData.id] = { timestamp: new Date().getTime(), data: {items: [] } };
 		var buffer = feedCache[feedData.id];
 
-		request(feedData.xmlUrl)
+		request(feedData.url)
 			.pipe(new FeedParser())
 			.on('error', function (error) {
 				console.error('Parsing error: ', error)

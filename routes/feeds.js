@@ -13,15 +13,14 @@ saxStream.onerror = function (e) {
 saxStream.on("opentag", function (node) {
 	if (node.name === "Module") {
 		currentEntry = {};
-		currentEntry.name = node.name;
 		currentEntry.id = feeds.length;
 		feeds.push(currentEntry);
 	}
 });
 
 saxStream.on("attribute", function (attr) {
-	if (currentEntry) {
-		currentEntry[attr.name] = attr.value;
+	if (currentEntry && attr.name === 'xmlUrl') {
+		currentEntry['url'] = attr.value;
 	}
 });
 
@@ -32,5 +31,5 @@ exports.find = function (index) {
 }
 
 exports.get = function (req, res) {
-	res.send(JSON.stringify(feeds));
+	res.send(200, feeds);
 }

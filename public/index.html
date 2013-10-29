@@ -8,7 +8,7 @@
   <title>My Feed Page</title>
 
   <link rel="stylesheet" href="lib/bootstrap-3/css/bootstrap.css">
-  <link rel="stylesheet" href="lib/bootstrap-3/css/bootstrap-theme.css">
+<!--  <link rel="stylesheet" href="lib/bootstrap-3/css/bootstrap-theme.css">-->
   <link rel="stylesheet" href="css/app.css">
 
   <script src="lib/jquery/jquery-1.10.2.js"></script>
@@ -25,7 +25,7 @@
 </head>
 <body ng-controller="FeedListCtrl" data-spy="scroll" data-target=".fixed-nav">
 
-  <nav class="navbar navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Home</a>
     </div>
@@ -33,16 +33,16 @@
   </div>
     <div class="container view-container">
       <div class="row">
-        <div class="col-md-4 hidden-sm hidden-xs">
+        <div class="col-md-4 col-lg-4 hidden-sm hidden-xs">
           <ul class="sidebar-nav nav nav-list affix-top" data-spy="affix">
-            <li ng-repeat="feed in feeds">
-              <a href="#section-{{feed.id}}">{{feed.xmlUrl | simpleurl}}</a>
+            <li ng-repeat="feed in feeds | orderBy:'url'">
+              <a href="#section-{{feed.id}}">{{feed.url | simpleurl}}</a>
             </li>
           </ul>
         </div>
 
-        <div class="col-md-7 col-sm-12 col-xs-12">
-          <div ng-repeat="feed in feeds" id="section-{{feed.id}}">
+        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+          <div ng-repeat="feed in feeds | orderBy:'url'" id="section-{{feed.id}}">
             <div ng-controller="FeedDetailCtrl" ng-init="feedId=feed.id">
               <div class='container'>
                 <div class='row'>

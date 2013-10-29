@@ -44,32 +44,8 @@
         <UserPref name="numItems" value="9" />
         <ModulePrefs xmlUrl="http://planet.gnome.org/rss20.xml" zipped="false" />
       </Module>
-    </Section>
-  </Tab>
-  <Tab skinUrl="skins/classic.xml" isMobile="true">
-    <Layout iGoogle:spec="THREE_COL_LAYOUT_1" />
-    <Section>
       <Module type="RSS" xmlns="http://www.google.com/ig">
-        <ModulePrefs xmlUrl="http://lambda-the-ultimate.org/rss.xml" />
-      </Module>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <ModulePrefs xmlUrl="http://planet.gnome.org/rss20.xml" />
-      </Module>
-    </Section>
-    <Section>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <ModulePrefs xmlUrl="http://syndication.thedailywtf.com/TheDailyWtf" />
-      </Module>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <ModulePrefs xmlUrl="http://stackoverflow.com/feeds" />
-      </Module>
-    </Section>
-    <Section>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <ModulePrefs xmlUrl="http://feeds.feedburner.com/SwitchOnTheCode" />
-      </Module>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <ModulePrefs xmlUrl="http://www.codeproject.com/webservices/LoungeRSS.aspx" />
+        <ModulePrefs xmlUrl="http://forums.thedailywtf.com/forums/rss.aspx?ForumID=18&amp;Mode=0" />
       </Module>
     </Section>
   </Tab>
