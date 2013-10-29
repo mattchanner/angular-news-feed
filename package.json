@@ -1,0 +1,26 @@
+{
+  "name": "homepage",
+  "scripts": {"start": "node app.js"},
+  "authors": {
+    "name": "Matt Channer",
+    "email": "mchanner@gmail.com"
+  },
+  "version": "0.0.1",
+  "description": "A simple feed based home page renderer",
+  "license": "BSD",
+  "homepage": "http://github.com/mattchanner/homepage",
+  "repository": {
+  	  "type" : "git",
+  	  "url" : "http://github.com/mattchanner/homepage.git"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+      "feedparser" : ">= 0.16.3",
+      "sax" : ">=  0.5.5",
+      "express" : ">= 3.4.3",
+      "request": ">= 2.27.0"
+    },
+    "readmeFilename": "README.md"
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GadgetTabML version="1.0" xmlns:iGoogle="http://www.google.com/ig" xmlns="http://schemas.google.com/GadgetTabML/2008">
+  <SkinPreferences zipcode="" country="uk" language="en" />
+  <Tab title="Feeds" skinUrl="http://www.elitedesigns.us/goothemes/MistedForest/doc_theme.xml">
+    <Layout iGoogle:spec="THREE_COL_LAYOUT_2" />
+    <Section>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <UserPref name="numItems" value="9" />
+        <ModulePrefs xmlUrl="http://programmers.stackexchange.com/feeds" />
+      </Module>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <UserPref name="numItems" value="9" />
+        <ModulePrefs xmlUrl="http://stackoverflow.com/feeds" zipped="false" />
+      </Module>
+    </Section>
+    <Section>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <UserPref name="numItems" value="9" />
+        <ModulePrefs xmlUrl="http://syndication.thedailywtf.com/TheDailyWtf" zipped="false" />
+      </Module>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <UserPref name="numItems" value="9" />
+        <ModulePrefs xmlUrl="http://jeremykun.wordpress.com/feed/" />
+      </Module>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <UserPref name="numItems" value="7" />
+        <ModulePrefs xmlUrl="http://www.theregister.co.uk/excerpts.rss" />
+      </Module>
+    </Section>
+    <Section>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <UserPref name="numItems" value="3" />
+        <ModulePrefs xmlUrl="http://feeds.feedburner.com/dailyjs" />
+      </Module>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <UserPref name="numItems" value="3" />
+        <ModulePrefs xmlUrl="http://tomasp.net/rss.xml" />
+      </Module>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <UserPref name="numItems" value="9" />
+        <ModulePrefs xmlUrl="http://lambda-the-ultimate.org/rss.xml" />
+      </Module>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <UserPref name="numItems" value="9" />
+        <ModulePrefs xmlUrl="http://planet.gnome.org/rss20.xml" zipped="false" />
+      </Module>
+    </Section>
+  </Tab>
+  <Tab skinUrl="skins/classic.xml" isMobile="true">
+    <Layout iGoogle:spec="THREE_COL_LAYOUT_1" />
+    <Section>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <ModulePrefs xmlUrl="http://lambda-the-ultimate.org/rss.xml" />
+      </Module>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <ModulePrefs xmlUrl="http://planet.gnome.org/rss20.xml" />
+      </Module>
+    </Section>
+    <Section>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <ModulePrefs xmlUrl="http://syndication.thedailywtf.com/TheDailyWtf" />
+      </Module>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <ModulePrefs xmlUrl="http://stackoverflow.com/feeds" />
+      </Module>
+    </Section>
+    <Section>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <ModulePrefs xmlUrl="http://feeds.feedburner.com/SwitchOnTheCode" />
+      </Module>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <ModulePrefs xmlUrl="http://www.codeproject.com/webservices/LoungeRSS.aspx" />
+      </Module>
+    </Section>
+  </Tab>
+</GadgetTabML>
