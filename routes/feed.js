@@ -47,7 +47,7 @@ exports.get = function (req, res) {
 				while (item = stream.read()) {
 					buffer.data.items.push({
 						title: item.title || item.description,
-						summary: item.summary,
+						summary: item.summary || item.description,
 						href: item.link,
 						index: buffer.data.items.length
 					})
