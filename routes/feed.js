@@ -24,7 +24,7 @@ exports.get = function (req, res) {
 	if (cached && cached.timestamp > ((new Date().getTime()) - CACHE_TIMEOUT))
 	{
 		res.set('Content-Type', 'application/json');
-		res.send(200, cached.data);	
+		res.send(200, cached);	
 	}
 	else
 	{
