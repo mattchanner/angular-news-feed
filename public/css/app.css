@@ -15,6 +15,9 @@ ul.sidebar-nav li.active {
 ul.sidebar-nav li.active a {
 	color: #F5F5F5 !important;
 }
+ul.sidebar-nav li.active a:hover {
+	color: #DD4814 !important;
+}
 .view-container {
 	margin-top:80px;
 }
