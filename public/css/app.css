@@ -9,6 +9,12 @@
 	background-color: #f5f5f5;
 	border-radius: 5px;
 }
+ul.sidebar-nav li.active {
+	background-color: #DD4814 !important;
+}
+ul.sidebar-nav li.active a {
+	color: #F5F5F5 !important;
+}
 .view-container {
 	margin-top:80px;
 }

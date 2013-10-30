@@ -5,7 +5,7 @@
   <meta charset="utf-8">  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>My Feed Page</title>
+  <title>home page aggregator</title>
 
   <link rel="stylesheet" href="lib/bootstrap-3/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
@@ -22,17 +22,16 @@
   <script src="js/services.js"></script>
   <script src="js/filters.js"></script>
 </head>
-<body ng-controller="FeedListCtrl" data-spy="scroll" data-target=".fixed-nav">
-
+<body ng-controller="FeedListCtrl" data-spy="scroll" data-target="#sidebar-nav">
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">matt's home page aggregator</a>
+      <a class="navbar-brand" href="#">home page aggregator</a>
     </div>
   </nav>
   </div>
     <div class="container view-container">
       <div class="row">
-        <div class="col-md-4 col-lg-4 hidden-sm hidden-xs">
+        <div class="col-md-4 col-lg-4 hidden-sm hidden-xs" id="sidebar-nav">
           <ul class="sidebar-nav nav nav-list affix-top" data-spy="affix">
             <li ng-repeat="feed in feeds | orderBy:'url'">
               <a href="#section-{{feed.id}}">{{feed.url | simpleurl}}</a>
@@ -40,11 +39,11 @@
           </ul>
         </div>
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-          <div ng-repeat="feed in feeds | orderBy:'url'" id="section-{{feed.id}}">
+          <div ng-repeat="feed in feeds | orderBy:'url'">
             <div ng-controller="FeedDetailCtrl" ng-init="feedId=feed.id">
               <div class='container'>
                 <div class='row'>
-                  <h3>{{feed.title}}</h3>
+                  <h3 id="section-{{feedId}}">{{feed.title}}</h3>
                 </div>
                 <div class='row'>
                   <div class="panel-group" id="accordion">

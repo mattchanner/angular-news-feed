@@ -21,13 +21,10 @@ exports.get = function (req, res) {
 
 	
 	// Check the cache and ensure it is not stale
-	if (cached && cached.timestamp > ((new Date().getTime()) - CACHE_TIMEOUT))
-	{
+	if (cached && cached.timestamp > ((new Date().getTime()) - CACHE_TIMEOUT)) {
 		res.set('Content-Type', 'application/json');
 		res.send(200, cached);	
-	}
-	else
-	{
+	} else {
 		feedCache[feedData.id] = { timestamp: new Date().getTime(), data: {items: [] } };
 		var buffer = feedCache[feedData.id];
 
