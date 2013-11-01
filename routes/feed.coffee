@@ -69,4 +69,11 @@ exports.summary = (req, res) ->
 			res.send 404, {message: "Unknown story id: #{storyId}"}
 		else
 			res.set 'Content-Type', 'text/html'
-			res.send 200, story.summary
+			res.send 200, "<html>" +
+						  "  <head>" +
+						  "    <link rel='stylesheet' href='/lib/bootstrap-3/css/bootstrap.css'>"+
+						  "  </head>"+
+						  "  <body>" +
+						  "    #{story.summary}" +
+						  "  </body>" +
+						  "</html>"
