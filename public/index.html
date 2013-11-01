@@ -63,9 +63,15 @@
                         <div class="panel-body">
                           <a class="open-link pull-right btn btn-sm btn-primary" 
                              href="{{item.href}}" 
-                             target="_blank"><span class="glyphicon glyphicon-share-alt"></span>
+                             target="_blank">
+                             <span class="glyphicon glyphicon-share-alt"></span>
                           </a>
-                          <div ng-bind-html="item.summary"></div>
+                          <iframe class="summary" 
+                                  frameborder="0"
+                                  height="400"
+                                  width="100%"
+                                  ng-src="{{item.summaryUrl}}">
+                          </iframe>
                         </div>
                       </div>
                     </div>

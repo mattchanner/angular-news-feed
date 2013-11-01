@@ -13,11 +13,11 @@ exports.get = (req, res) ->
 	feedData = feeds.find index
 	
 	if feedData is false
-		res.send(404)
+		res.send 404
 		return
 
 	cached = feedCache[feedData.id]
-	sent = false
+	sent = false 
 	
 	res.set 'Content-Type', 'application/json'
 
@@ -27,13 +27,14 @@ exports.get = (req, res) ->
 	else
 		feedCache[feedData.id] = 
 			timestamp: new Date().getTime()
+			id: feedData.id
 			data: 
-			 	items: []
+				items: []
 
 		buffer = feedCache[feedData.id]
 
 		request(feedData.url)
-			.pipe new FeedParser()
+			.pipe(new FeedParser())
 			.on 'error', (error) ->
 				console.error 'Parsing error: ', error
 				res.send 500
@@ -48,7 +49,24 @@ exports.get = (req, res) ->
 						title: item.title || item.description,
 						summary: item.summary || item.description,
 						href: item.link,
-						index: buffer.data.items.length
+						index: buffer.data.items.length,
+						url: "/feeds/#{buffer.id}/#{buffer.data.items.length}"
 			.on 'end', () ->
 				if !sent
 					res.send 200, buffer
+
+exports.summary = (req, res) ->
+
+	feedId = req.params.feedId
+	storyId = req.params.storyId
+	feed = feedCache[feedId]
+
+	if !feed
+		res.send 404, {message: "Unknown feed id: #{feedId}"}
+	else
+		story = feed.data.items[storyId]
+		if not story
+			res.send 404, {message: "Unknown story id: #{storyId}"}
+		else
+			res.set 'Content-Type', 'text/html'
+			res.send 200, story.summary

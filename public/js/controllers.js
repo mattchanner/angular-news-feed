@@ -13,7 +13,7 @@ feedControllers.controller('FeedDetailCtrl', ['$scope', '$routeParams', 'Feeds',
 			
 			feed.data.items = feed.data.items.slice(0, 10);			
 			feed.data.items.forEach(function (f) {
-				f.summary = $sce.trustAsHtml(f.summary);
+				f.summaryUrl = $sce.trustAsResourceUrl(f.url);
 			});
 			$scope.feed = feed;
 			

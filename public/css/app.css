@@ -1,4 +1,3 @@
-
 .accordion-toggle {
 	cursor:pointer;
 }
@@ -28,4 +27,8 @@ ul.nav li a{
 /*	margin-top:2px;
 	margin-right:2px;
 	line-height:24px;*/
+}
+.summary {
+	overflow: hidden;
+	margin-top: 10px;
 }
