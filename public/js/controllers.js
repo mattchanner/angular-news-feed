@@ -15,7 +15,20 @@ feedControllers.controller('FeedDetailCtrl', ['$scope', '$routeParams', 'Feeds',
 			feed.data.items.forEach(function (f) {
 				f.summaryUrl = $sce.trustAsResourceUrl(f.url);
 			});
-			$scope.feed = feed;
-			
+			$scope.feed = feed;			
 		});
+
+		$scope.activeItem = null;
+
+		$scope.itemclick = function (feedItem) {
+			$scope.activeItem = feedItem;
+			$scope.summaryUrl = feedItem.summaryUrl;
+		};
+
+		$scope.summaryOrBlank = function (feedItem) {
+
+			if (feedItem === $scope.activeItem) {
+				return feedItem.summaryUrl;
+			}
+		};
 	}]);

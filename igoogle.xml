@@ -6,46 +6,46 @@
     <Section>
       <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="9" />
-        <ModulePrefs xmlUrl="http://programmers.stackexchange.com/feeds" />
+        <ModulePrefs title="Programmers Stack Exchange" xmlUrl="http://programmers.stackexchange.com/feeds" />
       </Module>
       <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="9" />
-        <ModulePrefs xmlUrl="http://stackoverflow.com/feeds" />
+        <ModulePrefs title="Stack Overflow" xmlUrl="http://stackoverflow.com/feeds" />
       </Module>
     </Section>
     <Section>
       <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="9" />
-        <ModulePrefs xmlUrl="http://syndication.thedailywtf.com/TheDailyWtf" />
+        <ModulePrefs title="The DailytWTF Articles" xmlUrl="http://syndication.thedailywtf.com/TheDailyWtf" />
       </Module>
       <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="9" />
-        <ModulePrefs xmlUrl="http://jeremykun.wordpress.com/feed/" />
+        <ModulePrefs title="Math Programming" xmlUrl="http://jeremykun.wordpress.com/feed/" />
       </Module>
       <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="7" />
-        <ModulePrefs xmlUrl="http://www.theregister.co.uk/excerpts.rss" />
+        <ModulePrefs title="The Register" xmlUrl="http://www.theregister.co.uk/excerpts.rss" />
       </Module>
     </Section>
     <Section>
       <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="3" />
-        <ModulePrefs xmlUrl="http://feeds.feedburner.com/dailyjs" />
+        <ModulePrefs title="DailyJS" xmlUrl="http://feeds.feedburner.com/dailyjs" />
       </Module>
       <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="3" />
-        <ModulePrefs xmlUrl="http://tomasp.net/rss.xml" />
+        <ModulePrefs title="Tomas Petricek's blog" xmlUrl="http://tomasp.net/rss.xml" />
       </Module>
       <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="9" />
-        <ModulePrefs xmlUrl="http://lambda-the-ultimate.org/rss.xml" />
+        <ModulePrefs title="Lambda the Ultimate" xmlUrl="http://lambda-the-ultimate.org/rss.xml" />
       </Module>
       <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="9" />
-        <ModulePrefs xmlUrl="http://planet.gnome.org/rss20.xml" zipped="false" />
+        <ModulePrefs title="Gnome Planet" xmlUrl="http://planet.gnome.org/rss20.xml" zipped="false" />
       </Module>
       <Module type="RSS" xmlns="http://www.google.com/ig">
-        <ModulePrefs xmlUrl="http://forums.thedailywtf.com/forums/rss.aspx?ForumID=18&amp;Mode=0" />
+        <ModulePrefs title="The DailyWTF Forums" xmlUrl="http://forums.thedailywtf.com/forums/rss.aspx?ForumID=18&amp;Mode=0" />
       </Module>
     </Section>
   </Tab>
