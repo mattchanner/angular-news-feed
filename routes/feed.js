@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-'use strict';
-=======
 'use strict'
->>>>>>> 090e7e93afe39823dd37c5f9ccfa17734da21eba
 
 var CACHE_TIMEOUT = 1000 * 60 * 60; // 1 hour cache duration for each feed 
 
@@ -13,26 +9,16 @@ var FeedParser = require('feedparser'),
 
 exports.get = function (req, res) {
 
-<<<<<<< HEAD
 	var index = Number(req.params.id),
 		feedData = feeds.find(index);
-=======
-	var index = Number(req.params.id);
-	var feedData = feeds.find(index);
->>>>>>> 090e7e93afe39823dd37c5f9ccfa17734da21eba
 	
 	if (!feedData) {
 		res.send(404);
 		return;
 	}
 
-<<<<<<< HEAD
 	var cached = feedCache[feedData.id],
 		sent = false;
-=======
-	var cached = feedCache[feedData.id];
-	var sent = false;
->>>>>>> 090e7e93afe39823dd37c5f9ccfa17734da21eba
 	
 	res.set('Content-Type', 'application/json');
 
@@ -43,13 +29,8 @@ exports.get = function (req, res) {
 		feedCache[feedData.id] = {
 			timestamp: new Date().getTime(),
 			id: feedData.id,
-<<<<<<< HEAD
 			data: {
 				items: []
-=======
-			data: { 
-				items: [] 
->>>>>>> 090e7e93afe39823dd37c5f9ccfa17734da21eba
 			}
 		};
 
@@ -79,13 +60,9 @@ exports.get = function (req, res) {
 				}
 			})
 			.on('end', function () {
-<<<<<<< HEAD
-				if (!sent) { res.send(200, buffer); }
-=======
 				if (!sent) {
 					res.send(200, buffer);
 				}
->>>>>>> 090e7e93afe39823dd37c5f9ccfa17734da21eba
 			});
 	}
 }
@@ -106,11 +83,7 @@ exports.summary = function (req, res) {
 			res.set('Content-Type', 'text/html');
 			res.send(200, "<html>" +
 						  "  <head>" +
-<<<<<<< HEAD
 						  "    <link rel='stylesheet' href='/lib/bootstrap-3/css/bootstrap.css'>" +
-=======
-						  "    <link rel='stylesheet' href='/lib/bootstrap-3/css/bootstrap.css'>"+
->>>>>>> 090e7e93afe39823dd37c5f9ccfa17734da21eba
 						  "  </head>"+
 						  "  <body>" +
 						  		story.summary +
