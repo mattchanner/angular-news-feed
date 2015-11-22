@@ -21,6 +21,19 @@
         <UserPref name="numItems" value="7" />
         <ModulePrefs title="The Register" xmlUrl="http://www.theregister.co.uk/excerpts.rss" />
       </Module>
+
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <ModulePrefs title="Martin Fowler" xmlUrl="http://martinfowler.com/feed.atom" />
+      </Module>
+
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <ModulePrefs title="Code Better" xmlUrl="http://feeds.feedburner.com/CodeBetter" />
+      </Module>
+
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <ModulePrefs title="Scott Hanselman" xmlUrl="http://feeds.hanselman.com/scotthanselman" />
+      </Module>
+
     </Section>
     <Section>
        <Module type="RSS" xmlns="http://www.google.com/ig">
