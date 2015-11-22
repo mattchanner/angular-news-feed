@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GadgetTabML version="1.0" xmlns:iGoogle="http://www.google.com/ig" xmlns="http://schemas.google.com/GadgetTabML/2008">
   <SkinPreferences zipcode="" country="uk" language="en" />
-  <Tab title="Feeds" skinUrl="http://www.elitedesigns.us/goothemes/MistedForest/doc_theme.xml">
-    <Layout iGoogle:spec="THREE_COL_LAYOUT_2" />
+  <Tab title="Feeds">
     <Section>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <UserPref name="numItems" value="9" />
-        <ModulePrefs title="Programmers Stack Exchange" xmlUrl="http://programmers.stackexchange.com/feeds" />
+      <Module type="RSS" xmls="http://www.google.com/ig">
+          <UserPref name="numItems" value="9" />
+          <ModulePrefs title="Planet Clojure" xmlUrl="http://planet.clojure.in/atom.xml" />
+      </Module>
+      <Module type="RSS" xmls="http://www.google.com/ig">
+          <UserPref name="numItems" value="9" />
+          <ModulePrefs title="Hacker News" xmlUrl="https://news.ycombinator.com/rss" />
       </Module>
       <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="9" />
@@ -15,37 +18,24 @@
     </Section>
     <Section>
       <Module type="RSS" xmlns="http://www.google.com/ig">
-        <UserPref name="numItems" value="9" />
-        <ModulePrefs title="The DailytWTF Articles" xmlUrl="http://syndication.thedailywtf.com/TheDailyWtf" />
-      </Module>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <UserPref name="numItems" value="9" />
-        <ModulePrefs title="Math Programming" xmlUrl="http://jeremykun.wordpress.com/feed/" />
-      </Module>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="7" />
         <ModulePrefs title="The Register" xmlUrl="http://www.theregister.co.uk/excerpts.rss" />
       </Module>
     </Section>
     <Section>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <UserPref name="numItems" value="3" />
-        <ModulePrefs title="DailyJS" xmlUrl="http://feeds.feedburner.com/dailyjs" />
-      </Module>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
+       <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="3" />
         <ModulePrefs title="Tomas Petricek's blog" xmlUrl="http://tomasp.net/rss.xml" />
       </Module>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <UserPref name="numItems" value="9" />
-        <ModulePrefs title="Lambda the Ultimate" xmlUrl="http://lambda-the-ultimate.org/rss.xml" />
+        <Module type="RSS" xmlns="http://www.google.com/ig">
+        <ModulePrefs title="xkcd" xmlUrl="http://xkcd.com/rss.xml" />
       </Module>
       <Module type="RSS" xmlns="http://www.google.com/ig">
-        <UserPref name="numItems" value="9" />
-        <ModulePrefs title="Gnome Planet" xmlUrl="http://planet.gnome.org/rss20.xml" zipped="false" />
+        <ModulePrefs title="what-if?" xmlUrl="http://what-if.xkcd.com/feed.atom" />
       </Module>
+
       <Module type="RSS" xmlns="http://www.google.com/ig">
-        <ModulePrefs title="The DailyWTF Forums" xmlUrl="http://forums.thedailywtf.com/forums/rss.aspx?ForumID=18&amp;Mode=0" />
+        <ModulePrefs title="Julia Evens" xmlUrl="http://jvns.ca/atom.xml" />
       </Module>
     </Section>
   </Tab>

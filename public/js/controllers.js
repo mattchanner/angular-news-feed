@@ -15,6 +15,7 @@ feedControllers.controller('FeedDetailCtrl', ['$scope', '$routeParams', 'Feeds',
 			feed.data.items.forEach(function (f) {
 				f.summaryUrl = $sce.trustAsResourceUrl(f.url);
 			});
+			
 			$scope.feed = feed;			
 		});
 

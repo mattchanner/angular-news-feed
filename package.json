@@ -1,6 +1,6 @@
 {
   "name": "homepage",
-  "scripts": {"start": "node app.coffee"},
+  "scripts": {"start": "node app.js"},
   "authors": {
     "name": "Matt Channer",
     "email": "mchanner@gmail.com"

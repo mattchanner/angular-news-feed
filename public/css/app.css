@@ -1,7 +1,25 @@
+/*.sidebar-nav, .sidebar-nav li, .sidebar-nav a {
+	background-color: #3e444c;
+}
+
+.sidebar-nav li:hover , .sidebar-nav:hover a{
+	background-color: gray;
+}*/
 .accordion-toggle {
 	cursor:pointer;
 }
 
+.navbar-brand, .navbar-brand span  {
+	position: absolute;
+	top: 6px;
+}
+
+.navbar-brand span{
+	left: 25px;
+}
+.navbar-brand span.text{
+	left: 55px;
+}
 .sidebar-nav {
 	padding-top: 10px;
 	padding-bottom: 10px;

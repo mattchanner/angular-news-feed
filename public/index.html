@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="en" ng-app="feedApp">
 <head>
-  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>home page aggregator</title>
+
+  <title>snoozly feed reader</title>
 
   <link rel="stylesheet" href="lib/bootstrap-3/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
@@ -26,65 +25,61 @@
 <body ng-controller="FeedListCtrl">
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">snoozly feed reader</a>
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-leaf"></span><span class="text">snoozly</span></a>
     </div>
   </nav>
-  </div>
-    <div class="container view-container">
-      <div class="row">
-        <div class="col-md-4 col-lg-4 hidden-sm hidden-xs" id="sidebar-nav">
-          <ul class="sidebar-nav nav nav-list affix-top" data-spy="affix">
-            <li ng-repeat="feed in feeds | orderBy:'title'">
-              <a href="#section-{{feed.id}}">{{feed.title}}</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-          <div ng-repeat="feed in feeds | orderBy:'title'">
-            <div ng-controller="FeedDetailCtrl" ng-init="feedId=feed.id">
-              <div class='row'>
-                <h3 id="section-{{feedId}}">{{feed.title}}</h3>
-              </div>
-              <div class='row'>
-                <div class="panel-group" id="accordion">
-                  <div class="panel panel-default" ng-repeat="item in feed.data.items">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">
-                        <a class="accordion-toggle"
-                           ng-click="itemclick(item)"
-                           data-toggle="collapse"
-                           data-parent="#accordion"
-                           data-target="#{{feedId}}collapse{{item.index}}">
-                           {{item.title}}
-                        </a>
-                      </h4>
-                    </div>
-                    <div id="{{feedId}}collapse{{item.index}}" class="panel-collapse collapse">
-                      <div class="panel-body">
-                        <a class="open-link pull-right btn btn-sm btn-primary" 
-                           href="{{item.href}}" 
-                           target="_blank">
-                           <span class="glyphicon glyphicon-share-alt"></span>
-                        </a>
-                        <iframe class="summary" 
-                                frameborder="0"
-                                height="400"
-                                width="100%"
-                                ng-src="{{summaryOrBlank(item)}}">
-                        </iframe>
-                      </div>
+  <div class="container view-container">
+    <div class="row">
+      <div class="col-md-4 col-lg-4 hidden-sm hidden-xs" id="sidebar-nav">
+        <ul class="sidebar-nav nav nav-list affix-top" data-spy="affix">
+          <li ng-repeat="feed in feeds | orderBy:'title'">
+            <a href="" scroll-to="#section-{{feed.id}}">{{feed.title}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+        <div ng-repeat="feed in feeds | orderBy:'title'">
+          <div ng-controller="FeedDetailCtrl" ng-init="feedId=feed.id">
+            <div class='row' id="section-{{feedId}}">
+              <h3>{{feed.title}}</h3>
+            </div>
+            <div class='row'>
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default" ng-repeat="item in feed.data.items">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="accordion-toggle"
+                         ng-click="itemclick(item)"
+                         data-toggle="collapse"
+                         data-parent="#accordion"
+                         data-target="#{{feedId}}collapse{{item.index}}">
+                         {{item.title}}
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="{{feedId}}collapse{{item.index}}" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <a class="open-link pull-right btn btn-sm btn-primary"
+                         href="{{item.href}}"
+                         target="_blank">
+                         <span class="glyphicon glyphicon-share-alt"></span>
+                      </a>
+                      <iframe class="summary"
+                              frameborder="0"
+                              height="400"
+                              width="100%"
+                              resize-on-load
+                              ng-src="{{summaryOrBlank(item)}}">
+                      </iframe>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>        
+        </div>
       </div>
-    </div>  
-    <script>
-      // FIXME: hack to get the scroll spy to render once elements are present
-      setTimeout(function(){ $('body').scrollspy({ target: '#sidebar-nav' }); }, 2000);      
-    </script>
+    </div>
+  </div>
 </body>
 </html>
