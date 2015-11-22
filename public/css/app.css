@@ -21,9 +21,12 @@
 	left: 55px;
 }*/
 .sidebar-nav {
-	padding-top: 10px;
-	padding-bottom: 10px;
 	border-radius: 5px;
+	border: solid 1px #dadada;
+}
+
+.sidebar-nav li {
+	border-bottom: solid 1px #dadada;
 }
 
 .view-container {
