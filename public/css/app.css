@@ -8,39 +8,36 @@
 .accordion-toggle {
 	cursor:pointer;
 }
-
 .navbar {
-	box-shadow: rgba(0, 0, 0, 0.137255) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.117647) 0px 1px 5px 0px;
+	box-shadow: rgba(0, 0, 0, 0.137255) 0px 2px 2px 0px, 
+                rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, 
+                rgba(0, 0, 0, 0.117647) 0px 1px 5px 0px;
 	background-color: rgb(63, 81, 181);
 }
-
 a {
 	color: rgb(63, 81, 181);
 }
 .open-link {
+    background-color: rgb(63, 81, 181);
+    border: none !important;
 	border-radius: 50%;
-	box-shadow: rgba(0, 0, 0, 0.137255) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.117647) 0px 1px 5px 0px;
+	box-shadow: rgba(0, 0, 0, 0.137255) 0px 2px 2px 0px, 
+                rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, 
+                rgba(0, 0, 0, 0.117647) 0px 1px 5px 0px;
 }
-/*.navbar-brand, .navbar-brand span  {
-	position: absolute;
-	top: 6px;
-}*/
-/*
-.navbar-brand span{
-	left: 25px;
-}
-.navbar-brand span.text{
-	left: 55px;
-}*/
+.open-link:hover, .open-link:focus, .open-link:active, .open-link.focus, .open-link.active {
+    background-color: rgb(63, 81, 181);
+    border: none !important;
+    outline: none;
+    -moz-outline: none;
+}  
 .sidebar-nav {
 	border-radius: 5px;
 	border: solid 1px #dadada;
 }
-
 .sidebar-nav li {
 	border-bottom: solid 1px #dadada;
 }
-
 .view-container {
 	margin-top:80px;
 }
