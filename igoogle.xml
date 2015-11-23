@@ -15,6 +15,13 @@
         <UserPref name="numItems" value="9" />
         <ModulePrefs title="Stack Overflow" xmlUrl="http://stackoverflow.com/feeds" />
       </Module>
+
+      <Module type="RSS" xmlns="http://www.google.com/ig">
+        <UserPref name="numItems" value="9" />
+        <ModulePrefs title="Code Project - Insider" xmlUrl="http://www.codeproject.com/WebServices/MessageRSS.aspx?fid=1658735" />
+      </Module>
+
+
     </Section>
     <Section>
       <Module type="RSS" xmlns="http://www.google.com/ig">
