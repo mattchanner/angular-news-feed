@@ -18,7 +18,7 @@
 
       <Module type="RSS" xmlns="http://www.google.com/ig">
         <UserPref name="numItems" value="9" />
-        <ModulePrefs title="Code Project - Insider" xmlUrl="http://www.codeproject.com/WebServices/MessageRSS.aspx?fid=1658735" />
+        <ModulePrefs title="CodeProject Latest postings for The Insider" xmlUrl="http://www.codeproject.com/WebServices/MessageRSS.aspx?fid=1658735" />
       </Module>
 
 
@@ -34,11 +34,11 @@
       </Module>
 
       <Module type="RSS" xmlns="http://www.google.com/ig">
-        <ModulePrefs title="Code Better" xmlUrl="http://feeds.feedburner.com/CodeBetter" />
+        <ModulePrefs title="CodeBetter.Com Posts" xmlUrl="http://feeds.feedburner.com/CodeBetter" />
       </Module>
 
       <Module type="RSS" xmlns="http://www.google.com/ig">
-        <ModulePrefs title="Scott Hanselman" xmlUrl="http://feeds.hanselman.com/scotthanselman" />
+        <ModulePrefs title="Scott Hanselman's Blog" xmlUrl="http://feeds.hanselman.com/scotthanselman" />
       </Module>
 
     </Section>
