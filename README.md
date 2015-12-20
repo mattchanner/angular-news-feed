@@ -4,6 +4,8 @@ A node.js application with an Angular.js front end to show a number of news feed
 
 The news feed format is based on the exported iGoogle xml format (the project came about when iGoogle was killed off).
 
+![Screen shot](https://github.com/mattchanner/angular-news-feed/blob/master/screenshot.png)
+
 ## Requirements
 
 - [sax](https://github.com/isaacs/sax-js)
