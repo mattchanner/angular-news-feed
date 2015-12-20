@@ -1,6 +1,6 @@
 #  Angular News Feed
 
-A node.js application with an Angular.js front end to show a number of news feeds.
+A node.js application with a responsive Angular.js front end showing a number of news feeds.
 
 The news feed format is based on the exported iGoogle xml format (the project came about when iGoogle was killed off).
 
