@@ -27,6 +27,9 @@ app.get('/feeds', feeds.get);
 app.get('/feeds/:id', feed.get);
 app.get('/feeds/:feedId/:storyId', feed.summary);
 
+
 var port = process.env.PORT || 3000;
+
 console.log("Starting server on port " + port);
+
 app.listen(port);
