@@ -19,7 +19,7 @@
   "dependencies": {
       "feedparser" : ">= 0.16.3",
       "sax" : ">=  0.5.5",
-      "express" : ">= 3.4.3",
+      "express" : "= 3.4.3",
       "request": ">= 2.27.0"
     },
     "readmeFilename": "README.md"

@@ -1,10 +1,12 @@
+/*global require: true*/
+
 'use strict';
 
 var express = require("express"),
     path = require("path"),
 	home = require("./routes/home"),
 	feeds = require("./routes/feeds"),
-	feed = require("./routes/feed")
+	feed = require("./routes/feed");
 
 var app = express();
 
