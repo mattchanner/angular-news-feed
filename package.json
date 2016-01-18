@@ -8,10 +8,10 @@
   "version": "0.0.1",
   "description": "A simple feed based home page renderer",
   "license": "BSD",
-  "homepage": "http://github.com/mattchanner/homepage",
+  "homepage": "http://github.com/mattchanner/angular-news-feed",
   "repository": {
   	  "type" : "git",
-  	  "url" : "http://github.com/mattchanner/homepage.git"
+  	  "url" : "http://github.com/mattchanner/angular-news-feed.git"
   },
   "engines": {
     "node": ">= 0.8.0"

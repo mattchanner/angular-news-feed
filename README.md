@@ -1,4 +1,10 @@
-#  Homepage - A simple page containing RSS listings to replace my iGoogle home page
+#  Angular News Feed
+
+A node.js application with a responsive Angular.js front end showing a number of news feeds.
+
+The news feed format is based on the exported iGoogle xml format (the project came about when iGoogle was killed off).
+
+![Screen shot](https://github.com/mattchanner/angular-news-feed/blob/master/screenshot.png)
 
 ## Requirements
 
