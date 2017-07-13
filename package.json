@@ -14,7 +14,7 @@
   	  "url" : "http://github.com/mattchanner/angular-news-feed.git"
   },
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 4.8.4"
   },
   "dependencies": {
       "feedparser" : ">= 0.16.3",
