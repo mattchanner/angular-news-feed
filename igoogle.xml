@@ -15,6 +15,7 @@
         <UserPref name="numItems" value="9" />
         <ModulePrefs title="Stack Overflow" xmlUrl="http://stackoverflow.com/feeds" />
         <ModulePrefs title="Ayende @ Rahien" xmlUrl="http://feeds.feedburner.com/AyendeRahien" />
+        <ModulePrefs title="Jimmy Bogard" xmlUrl="http://feeds.feedburner.com/GrabBagOfT?format=xml" />
       </Module>
 
       <Module type="RSS" xmlns="http://www.google.com/ig">

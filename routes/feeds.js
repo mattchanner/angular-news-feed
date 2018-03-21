@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 var fs = require('fs'),
 	sax = require('sax'),
 	strict = true,

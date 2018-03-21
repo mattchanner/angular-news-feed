@@ -1,6 +1,8 @@
 {
   "name": "homepage",
-  "scripts": {"start": "node app.js"},
+  "scripts": {
+    "start": "node app.js"
+  },
   "authors": {
     "name": "Matt Channer",
     "email": "mchanner@gmail.com"
@@ -10,17 +12,17 @@
   "license": "BSD",
   "homepage": "http://github.com/mattchanner/angular-news-feed",
   "repository": {
-  	  "type" : "git",
-  	  "url" : "http://github.com/mattchanner/angular-news-feed.git"
+    "type": "git",
+    "url": "http://github.com/mattchanner/angular-news-feed.git"
   },
   "engines": {
     "node": ">= 4.8.4"
   },
   "dependencies": {
-      "feedparser" : ">= 0.16.3",
-      "sax" : ">=  0.5.5",
-      "express" : "= 3.4.3",
-      "request": ">= 2.27.0"
-    },
-    "readmeFilename": "README.md"
+    "feedparser": ">= 0.16.3",
+    "sax": ">=  0.5.5",
+    "express": "= 3.4.3",
+    "request": ">= 2.27.0"
+  },
+  "readmeFilename": "README.md"
 }
