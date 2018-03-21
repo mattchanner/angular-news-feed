@@ -41,9 +41,10 @@
         <ModulePrefs title="Scott Hanselman's Blog" xmlUrl="http://feeds.hanselman.com/scotthanselman" />
       </Module>
 
-       <Module type="RSS" xmlns="http://www.google.com/ig">
+      <Module type="RSS" xmlns="http://www.google.com/ig">
         <ModulePrefs title="Tomas Petricek's blog" xmlUrl="http://tomasp.net/rss.xml" />
       </Module>
+      <Module type="RSS" xmlns="http://www.google.com/ig">
         <ModulePrefs title="xkcd" xmlUrl="http://xkcd.com/rss.xml" />
       </Module>
       <Module type="RSS" xmlns="http://www.google.com/ig">
