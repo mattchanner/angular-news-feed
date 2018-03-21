@@ -4,60 +4,18 @@
   <Tab title="Feeds">
     <Section>
       <Module type="RSS" xmls="http://www.google.com/ig">
-          <UserPref name="numItems" value="9" />
-          <ModulePrefs title="Planet Clojure" xmlUrl="http://planet.clojure.in/atom.xml" />
-      </Module>
-      <Module type="RSS" xmls="http://www.google.com/ig">
-          <UserPref name="numItems" value="9" />
-          <ModulePrefs title="Hacker News" xmlUrl="https://news.ycombinator.com/rss" />
-      </Module>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <UserPref name="numItems" value="9" />
-        <ModulePrefs title="Stack Overflow" xmlUrl="http://stackoverflow.com/feeds" />
+        <ModulePrefs title="Hacker News" xmlUrl="https://news.ycombinator.com/rss" />
         <ModulePrefs title="Ayende @ Rahien" xmlUrl="http://feeds.feedburner.com/AyendeRahien" />
         <ModulePrefs title="Jimmy Bogard" xmlUrl="http://feeds.feedburner.com/GrabBagOfT?format=xml" />
-      </Module>
-
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <UserPref name="numItems" value="9" />
         <ModulePrefs title="CodeProject Latest postings for The Insider" xmlUrl="http://www.codeproject.com/WebServices/MessageRSS.aspx?fid=1658735" />
-      </Module>
-
-
-    </Section>
-    <Section>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <UserPref name="numItems" value="7" />
         <ModulePrefs title="The Register" xmlUrl="http://www.theregister.co.uk/excerpts.rss" />
-      </Module>
-
-      <Module type="RSS" xmlns="http://www.google.com/ig">
         <ModulePrefs title="Martin Fowler" xmlUrl="http://martinfowler.com/feed.atom" />
-      </Module>
-
-      <Module type="RSS" xmlns="http://www.google.com/ig">
-        <ModulePrefs title="CodeBetter.Com Posts" xmlUrl="http://feeds.feedburner.com/CodeBetter" />
-      </Module>
-
-      <Module type="RSS" xmlns="http://www.google.com/ig">
         <ModulePrefs title="Scott Hanselman's Blog" xmlUrl="http://feeds.hanselman.com/scotthanselman" />
-      </Module>
-
-    </Section>
-    <Section>
-       <Module type="RSS" xmlns="http://www.google.com/ig">
-        <UserPref name="numItems" value="3" />
         <ModulePrefs title="Tomas Petricek's blog" xmlUrl="http://tomasp.net/rss.xml" />
-      </Module>
-        <Module type="RSS" xmlns="http://www.google.com/ig">
         <ModulePrefs title="xkcd" xmlUrl="http://xkcd.com/rss.xml" />
-      </Module>
-      <Module type="RSS" xmlns="http://www.google.com/ig">
         <ModulePrefs title="what-if?" xmlUrl="http://what-if.xkcd.com/feed.atom" />
-      </Module>
-
-      <Module type="RSS" xmlns="http://www.google.com/ig">
         <ModulePrefs title="Julia Evens" xmlUrl="http://jvns.ca/atom.xml" />
+        <ModulePrefs title="Channel 9" xmlUrl="https://s.ch9.ms/Feeds/RSS" />
       </Module>
     </Section>
   </Tab>
