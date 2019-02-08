@@ -19,10 +19,12 @@
     "node": ">= 4.8.4"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "feedparser": ">= 0.16.3",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0",
     "sax": ">=  0.5.5",
-    "express": "= 3.4.3",
-    "request": ">= 2.27.0"
+    "serve-static": "^1.13.2"
   },
   "readmeFilename": "README.md"
 }

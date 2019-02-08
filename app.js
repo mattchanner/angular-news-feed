@@ -2,27 +2,19 @@
 
 'use strict';
 
-var express = require("express"),
-    path = require("path"),
-	home = require("./routes/home"),
-	feeds = require("./routes/feeds"),
-	feed = require("./routes/feed");
+const express = require("express");
+const path = require("path");
+const serveStatic = require('serve-static');
+const home = require("./routes/home");
+const feeds = require("./routes/feeds");
+const feed = require("./routes/feed");
+const morgan = require('morgan')
+const  app = express();
 
-var app = express();
-
-app.configure(function () {
-    app.use(express.favicon());
-    app.use(express.static(path.join(__dirname, "/public")));
-});
+app.use(serveStatic('public'))
 
 // development is the default. Can be set by an environment variable i.e. set NODE_ENV=production
-app.configure("development", function () {
-    app.use(express.logger('dev'));
-});
-
-app.configure("production", function () {
-    app.use(express.logger('prod'));
-});
+app.use(morgan('combined'));
 
 app.get('/', home.index);
 app.get('/feeds', feeds.get);
